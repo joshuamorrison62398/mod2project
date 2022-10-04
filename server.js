@@ -1,15 +1,25 @@
-const express = require('express')
+const express = require("express");
+const mongoose = require("mongoose");
+const router = require("./routes/book-Routes");
+const cors = require("cors");
+const app = express();
 
-const port = 3000
+// Middlewares
+app.use(express.json());
+app.use(cors());
+app.use("/books", router); // localhost:3000/books
 
-const app = express()
+mongoose
+  .connect(
+    "mongodb+srv://admin:skittles623@cluster0.bjgkyzs.mongodb.net/bookStore?retryWrites=true&w=majority"
+  )
+  .then(() => console.log("Connected To Database"))
+  .then(() => {
+    app.listen(3000);
+  })
+  .catch((err) => console.log(err));
 
 
-app.get('/', (req, res) => {
-    res.send('<h1>Shoe Store</h1>')
-})
 
-app.listen(3000, () => {
-    console.log('listening on port 3000')
-})
 
+//"mongodb+srv://admin:skittles623@cluster0.bjgkyzs.mongodb.net/bookstore?retryWrites=true&w=majority"
