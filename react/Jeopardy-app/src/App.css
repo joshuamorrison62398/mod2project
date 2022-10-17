@@ -1,0 +1,50 @@
+body{
+  margin: 0;
+  padding: 0;
+  background-color: grey;
+}
+.App{
+  text-align: center;
+}
+#scoreup{
+  background-color: green;
+  margin:5px;
+  font-size: 20px;
+  border: solid 2px;
+}
+#scoreup:hover{
+  background-color: green;
+}
+
+#scoredown{
+  background-color: pink;
+  margin: 5px;
+  font-size: 20px;
+  border: solid 2px;
+}
+#scoredown:hover{
+  background-color: brown;
+}
+#resetscore{
+  background-color: red;
+  margin: 5px;
+  font-size: 20px;
+  border: solid 2px;
+}
+#resetscore:hover{
+  background-color: gainsboro;
+}
+button{
+  font-size: 30px;
+  background-color: yellow;
+}
+button:hover{
+  background-color: darkgoldenrod;
+}
+span{
+  font-size: 45px;
+  color: darkgoldenrod;
+}
+h1{
+ color: antiquewhite;
+}
